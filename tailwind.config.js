@@ -6,7 +6,18 @@ module.exports = {
     "./skeletons/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        shimmers: {
+          "0%": { transform: "translateX(-150%)" },
+          "50%": { transform: "translateX(-60%)" },
+          "100%": { transform: "translateX(150%)" },
+        },
+      },
+      animation: {
+        shimmers: "shimmers 2.5s infinite",
+      },
+    },
   },
   plugins: [],
 };
