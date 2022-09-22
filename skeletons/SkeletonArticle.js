@@ -1,9 +1,10 @@
 import React from "react";
 import SkeletonElement from "./SkeletonElement";
 
-const SkeletonArticle = () => {
+const SkeletonArticle = ({ light }) => {
+  const themeClass = !light ? "bg-[#f2f2f2]" : "bg-[#444]";
   return (
-    <div className="m-[20px auto] p-[10px]">
+    <div className={`my-[20px] mx-auto p-[10px] ${themeClass}`}>
       <div className="">
         <SkeletonElement type="title" />
         <SkeletonElement type="text" />
